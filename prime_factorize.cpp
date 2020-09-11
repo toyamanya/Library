@@ -25,6 +25,14 @@ map<long long, long long> prime_factorize(long long n) {
     return mp;
 }
 
+// prime_factorize を使用してNの約数の個数を返す
+long long factor_num(long long n) {
+    long long num = 1;
+    map<long long, long long> mp = prime_factorize(n);
+    for (auto p : mp) num *= p.second + 1;
+    return num;
+}
+
 // 確認用コード
 int main() {
     long long n;
@@ -34,4 +42,5 @@ int main() {
     for (auto itr : mp) {
         cout << itr.first << "^(" << itr.second << ")" << endl;
     }
+    cout << "約数の個数は" << factor_num(n) << endl;
 }
