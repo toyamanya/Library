@@ -25,6 +25,7 @@ map<long long, long long> prime_factorize(long long n) {
     return mp;
 }
 
+// 確認用コード
 int main() {
     long long n;
     cin >> n;
