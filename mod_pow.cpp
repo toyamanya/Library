@@ -5,6 +5,8 @@ const int MOD = 1000000007;
 // 繰り返し二乗法
 // a^n mod pを高速に求める
 long long modPow(long long a, long long n, long long p) {
+    if (n == 0)
+        return 1;
     if (n == 1)
         return a % p;
     if (n % 2 == 1)
