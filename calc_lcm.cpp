@@ -21,5 +21,12 @@ long long calcGcd(long long a, long long b) {
 }
 
 long long calcLcm(long long a, long long b) {
-    return a * b / calcGcd(a, b);
+    // a > bにする
+    if (a < b) {
+        int tmp = a;
+        a = b;
+        b = tmp;
+    }
+
+    return a / calcGcd(a, b) * b;
 }
