@@ -2,17 +2,19 @@
 
 関数名の繋ぎ方が大文字だったりアンダースコアでばらばらなことに意味はないです
 
-## calc_gcd.cpp
+## euclidean_gcd.cpp
 
 ユークリッドの互除法により最小公倍数を求めてその値を返す関数
 
+参考:https://w.atwiki.jp/imolib/pages/14.html
+
 C++17 からデフォルトであるらしい
 
-## calc_lcm.cpp
+## euclidean_lcm.cpp
 
 最大公約数を求めて返す関数
 
-calc_gcd が内部にある
+euclidean_gcd が内部にある
 
 オーバーフローとか考えると計算の順序を見直した方がいいかもしれない
 
